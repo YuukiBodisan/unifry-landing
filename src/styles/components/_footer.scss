@@ -1,0 +1,100 @@
+footer {
+	.main-block {
+		max-width: 1091px;
+		min-height: 289px;
+		margin: 0 auto;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 85px;
+
+		.contact {
+			margin: 0 0 15px 0;
+			p {
+				@include p-footer;
+				@include d-flex-align;
+
+				&::before {
+					content: "";
+					display: inline-block;
+					width: 24px;
+					height: 24px;
+					margin-right: 8px;
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+
+				&:nth-of-type(1)::before {
+					background-image: url("/img/icons/mail.svg");
+				}
+
+				&:nth-of-type(2)::before {
+					background-image: url("/img/icons/phone.svg");
+				}
+			}
+		}
+
+		.column {
+			h4 {
+				@include h4-footer;
+				text-align: left;
+			}
+
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+
+				li {
+					margin: 0 0 15px 0;
+					a {
+						@include p-footer;
+						text-decoration: none;
+
+						&:hover {
+							color: $primary-text-color;
+						}
+					}
+				}
+			}
+		}
+
+		.column-group {
+			display: flex;
+			gap: 85px;
+		}
+	}
+
+	.fading-line {
+		height: 2px;
+		width: 100%;
+		background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.2), transparent);
+		margin: 0 0 30px 0;
+	}
+
+	.copyright {
+		min-height: 104px;
+
+		h5 {
+			@include p-footer;
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 1100px) {
+	footer {
+		.main-block {
+			align-items: center;
+			flex-direction: column;
+			gap: 0;
+
+			.column-group {
+				justify-content: center;
+				flex-wrap: wrap;
+				gap: 65px;
+			}
+		}
+	}
+}

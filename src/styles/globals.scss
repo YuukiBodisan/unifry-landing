@@ -1,0 +1,27 @@
+@import "normalize.css";
+@import "variables.scss";
+@import "mixins.scss";
+@import "./components/header";
+@import "./components/decisions";
+@import "./components/features";
+@import "./components/advatnages";
+@import "./components/testimonial";
+@import "./components/avatars";
+@import "./components/faq";
+@import "./components/download";
+@import "./components/footer";
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-clash-display), sans-serif;
+}
+
+.container {
+	max-width: 1370px;
+	margin: 0 auto;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
